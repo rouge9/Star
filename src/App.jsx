@@ -7,21 +7,23 @@ import ShuffleHero from "./componets/ShuffleHero";
 import Gallery from "./componets/Gallery";
 import Features from "./componets/Features";
 import SimpleFooter from "./componets/SimpleFooter";
-// import FloatingNavBar from "./componets/FloatingNavBar";
+import FloatingNavBar from "./componets/FloatingNavBar";
+import Clients from "./componets/Clients";
 
 function App() {
   return (
-    <Fragment>
-      <NavBar />
-      {/* <FloatingNavBar /> */}
+    <div>
+      {/* <NavBar /> */}
+      <FloatingNavBar />
       {/* <Hero /> */}
       <ShuffleHero />
       {/* <Divider /> */}
       <Features />
+      <Clients />
       <Gallery />
       <SimpleFooter />
       {/* <Footer /> */}
-    </Fragment>
+    </div>
   );
 }
 
