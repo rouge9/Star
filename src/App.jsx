@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import NavBar from "./componets/NavBar";
+// import { Fragment } from "react";
+// import NavBar from "./componets/NavBar";
 // import Hero from "./componets/Hero";
 // import Divider from "./componets/Divider";
 // import Footer from "./componets/Footer";

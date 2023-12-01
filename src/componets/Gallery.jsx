@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Modal from "./Modal";
 
 function Gallery() {
   const [modalImg, setModalImg] = useState("");
+  const [position, setPosition] = useState([9.03314, 38.75008]); // [lat, lng]
   const images = [
     {
       id: 1,
@@ -13,6 +15,12 @@ function Gallery() {
     },
   ];
 
+  const handleImgClick = (p) => {
+    setModalImg(images[0].src);
+    setPosition(p);
+    document.getElementById("modal").showModal();
+  };
+
   return (
     <div>
       <div className="flex justify-center items-center pb-8 pt-8">
@@ -21,18 +29,20 @@ function Gallery() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4">
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover cursor-pointer"
+            className="w-full h-auto object-cover cursor-pointer hover:scale-105"
             src={images[0].src}
             alt="Image Description"
             onClick={() => {
-              setModalImg(images[0].src);
-              document.getElementById("modal").showModal();
+              handleImgClick([9.028293, 38.752438]);
             }}
           />
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover cursor-pointer hover:scale-105"
             src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"
             alt="Image Description"
+            onClick={() => {
+              handleImgClick([9.037004, 38.74109]);
+            }}
           />
           <img
             className="w-full h-56 object-cover"
@@ -82,30 +92,7 @@ function Gallery() {
           />
         </div>
       </div>
-      <dialog id="modal" className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
-          <div className="grid grid-cols-2 gap-2">
-            <img
-              className="w-full h-auto object-cover"
-              src={modalImg}
-              alt="Image Description"
-            />
-            <img
-              className="w-full h-auto object-cover"
-              src={modalImg}
-              alt="Image Description"
-            />
-          </div>
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
-        </div>
-      </dialog>
+      <Modal modalImg={modalImg} images={images} position={position} />
     </div>
   );
 }
