@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const ShuffleHero = () => {
   return (
     <section
-      className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-7xl mx-auto h-screen"
+      className="w-fit px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto h-auto mb-6"
       style={{
         backgroundImage: `url(/hero.svg)`,
         backgroundSize: "contain",
@@ -121,7 +121,7 @@ const generateSquares = () => {
       key={sq.id}
       // layout
       //   transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full transition-all duration-1500 ease-in-out transform hover:scale-110"
+      className="w-full h-full transition-all duration-1500 ease-in-out transform hover:scale-105 rounded-md"
       style={{
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",

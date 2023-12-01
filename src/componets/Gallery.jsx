@@ -29,7 +29,7 @@ function Gallery() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4">
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover cursor-pointer hover:scale-105"
+            className="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300 ease-in-out rounded-md"
             src={images[0].src}
             alt="Image Description"
             onClick={() => {
@@ -37,7 +37,7 @@ function Gallery() {
             }}
           />
           <img
-            className="w-full h-auto object-cover cursor-pointer hover:scale-105"
+            className="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300 ease-in-out rounded-md"
             src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"
             alt="Image Description"
             onClick={() => {

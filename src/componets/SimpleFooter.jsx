@@ -2,16 +2,16 @@
 function SimpleFooter() {
   return (
     <footer
-      className="w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-base-300"
+      className="w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-base-content rounded-se-3xl"
       style={{
-        backgroundImage: `url(/polygon-bg-element.svg)`,
+        backgroundImage: `url(/banner-bg-gray.svg)`,
         backgroundSize: "cover",
       }}
     >
       <div className="text-center">
         <div>
           <a
-            className="flex-none text-xl font-semibold text-black"
+            className="flex-none text-xl font-semibold text-white"
             href="#"
             aria-label="Brand"
           >
@@ -20,24 +20,24 @@ function SimpleFooter() {
         </div>
 
         <div className="mt-3">
-          <p className="text-gray-500">
+          <p className="text-gray-100">
             We're part of the{" "}
             <a
-              className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+              className="font-semibold text-orange-300 hover:text-orange-600 "
               href="#"
             >
               Htmlstream
             </a>{" "}
             family.
           </p>
-          <p className="text-gray-500">
+          <p className="text-gray-100">
             © Preline. 2022 Htmlstream. All rights reserved.
           </p>
         </div>
 
         <div className="mt-3 space-x-2">
           <a
-            className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+            className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-100 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
             href="#"
           >
             <svg

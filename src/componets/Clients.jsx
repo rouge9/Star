@@ -7,7 +7,7 @@ function Clients() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6">
         <a
           className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
+          href="/projects"
         >
           <svg
             className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
