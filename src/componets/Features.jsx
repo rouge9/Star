@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 function Features() {
   return (
+    // <div className="bg-gradient-to-r from-red-500 via-purple-400 to-blue-500">
     <div className="max-w-[85rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div className="text-center pb-14">
         <h2 className="text-3xl font-extrabold text-gray-800  sm:text-4xl">
@@ -134,6 +136,7 @@ function Features() {
         </div>
       </div>
     </div>
+    // </div>
   );
 }
 

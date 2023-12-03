@@ -10,6 +10,8 @@ import Features from "./componets/Features";
 // import FloatingNavBar from "./componets/FloatingNavBar";
 import Clients from "./componets/Clients";
 import Layout from "./layout/Layout";
+import Services from "./componets/Services";
+import SimpleGallery from "./componets/SimpleGallery";
 
 function App() {
   return (
@@ -19,9 +21,11 @@ function App() {
       {/* <Hero /> */}
       <ShuffleHero />
       {/* <Divider /> */}
-      <Features />
       <Clients />
-      <Gallery />
+      {/* <SimpleGallery /> */}
+      {/* <Gallery /> */}
+      <Services />
+      {/* <Features /> */}
       {/* <SimpleFooter /> */}
       {/* <Footer /> */}
     </Layout>

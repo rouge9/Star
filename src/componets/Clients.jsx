@@ -1,6 +1,6 @@
 function Clients() {
   return (
-    <div className="max-w-fit px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-black">
+    <div className="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-black">
       <p className="text-4xl font-extrabold text-white text-center mb-8">
         Our Clients Include
       </p>

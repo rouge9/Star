@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const ShuffleHero = () => {
   return (
     <section
-      className="w-fit px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto h-auto mb-6"
+      className="px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto h-auto mb-6 max-w-[85rem]"
       style={{
         backgroundImage: `url(/hero.svg)`,
         backgroundSize: "contain",
@@ -117,16 +117,16 @@ const squareData = [
 
 const generateSquares = () => {
   return shuffle(squareData).map((sq) => (
-    <div
+    <motion.div
       key={sq.id}
-      // layout
-      //   transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full transition-all duration-1500 ease-in-out transform hover:scale-105 rounded-md"
+      layout
+      transition={{ duration: 1.5, type: "spring" }}
+      className="w-full h-full rounded-md"
       style={{
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",
       }}
-    ></div>
+    ></motion.div>
   ));
 };
 
