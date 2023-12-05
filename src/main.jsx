@@ -6,6 +6,7 @@ import "./index.css";
 import "leaflet/dist/leaflet.css";
 import ErrorPage from "./componets/ErrorPage.jsx";
 import Projects from "./routes/Projects.jsx";
+import GalleryPage from "./routes/GalleryPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
   {
     path: "/projects",
     element: <Projects />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/gallery",
+    element: <GalleryPage />,
     errorElement: <ErrorPage />,
   },
 ]);

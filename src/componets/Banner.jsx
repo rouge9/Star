@@ -1,7 +1,7 @@
 function Banner() {
   return (
     <div className="bg-gradient-to-r from-red-500 via-purple-400 to-blue-500 rounded-ee-3xl">
-      <div className="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto rounded-se-lg">
+      <div className="max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-8 mx-auto rounded-se-lg">
         <div className="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
           <div className="text-center md:text-start">
             <p className="text-2xl font-bold text-white/[.8] uppercase tracking-wider">

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const ShuffleHero = () => {
   return (
     <section
-      className="px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto h-auto mb-6 max-w-[85rem]"
+      className="px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto h-auto mb-6 max-w-screen-2xl"
       style={{
         backgroundImage: `url(/hero.svg)`,
         backgroundSize: "contain",

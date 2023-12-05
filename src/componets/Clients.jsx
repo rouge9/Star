@@ -1,323 +1,142 @@
+import ClientsCard from "./ClientsCard";
+
 function Clients() {
   return (
-    <div className="max-w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-black">
-      <p className="text-4xl font-extrabold text-white text-center mb-8">
-        Our Clients Include
-      </p>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6">
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="/projects"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="13.5" cy="6.5" r=".5" />
-            <circle cx="17.5" cy="10.5" r=".5" />
-            <circle cx="8.5" cy="7.5" r=".5" />
-            <circle cx="6.5" cy="12.5" r=".5" />
-            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-          </svg>
+    // <div className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-200 rounded-lg">
+    <div className="max-w-screen-2xl px-4 sm:px-6 lg:px-8 mx-auto">
+      {/* <div className="h-96 rounded-xl overflow-hidden">
+        <img
+          className="w-full object-cover rounded-xl"
+          src="https://images.unsplash.com/photo-1624571409412-1f253e1ecc89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+          alt="Image Description"
+        />
+      </div> */}
 
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Build your portfolio
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                The simplest way to keep your portfolio always up-to-date.
-              </p>
-            </div>
+      <div className="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="lg:col-span-1">
+          <h2 className="font-bold text-2xl text-center md:text-left md:text-3xl text-gray-800 ">
+            Our Clients
+          </h2>
+          <p className="mt-2 md:mt-4 text-gray-500">
+            At Star Painting, our foremost commitment is to provide exemplary
+            painting, decorating, epoxy flooring, and related services tailored
+            to meet the needs of our diverse clientele, spanning residential and
+            commercial sectors throughout the Addis Ababa region.
+          </p>
+        </div>
 
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
+        <div className="lg:col-span-2">
+          <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
+            <ClientsCard
+              title={"Residential Clients"}
+              description={
+                "Our team of seasoned professionals is committed to turning your residential painting dreams into reality."
+              }
+              icon={
+                <svg
+                  className="flex-shrink-0 mt-1 w-6 h-6 text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="18" height="10" x="3" y="11" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4" />
+                  <line x1="8" x2="8" y1="16" y2="16" />
+                  <line x1="16" x2="16" y1="16" y2="16" />
+                </svg>
+              }
+            />
+            <ClientsCard
+              title={"Commercial Clients"}
+              description={
+                "We have the knowledge and skillset to deliver results that exceed your expectations."
+              }
+              icon={
+                <svg
+                  className="flex-shrink-0 mt-1 w-6 h-6 text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="18" height="10" x="3" y="11" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4" />
+                  <line x1="8" x2="8" y1="16" y2="16" />
+                  <line x1="16" x2="16" y1="16" y2="16" />
+                </svg>
+              }
+            />
+
+            <ClientsCard
+              title={"Government and Public Sector"}
+              description={
+                "We have the knowledge and skillset to deliver results that exceed your expectations."
+              }
+              icon={
+                <svg
+                  className="flex-shrink-0 mt-1 w-6 h-6 text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="18" height="10" x="3" y="11" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4" />
+                  <line x1="8" x2="8" y1="16" y2="16" />
+                  <line x1="16" x2="16" y1="16" y2="16" />
+                </svg>
+              }
+            />
+            <ClientsCard
+              title="Real Estate Investors"
+              description={
+                "We have the knowledge and skillset to deliver results that exceed your expectations."
+              }
+              icon={
+                <svg
+                  className="flex-shrink-0 mt-1 w-6 h-6 text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="18" height="10" x="3" y="11" rx="2" />
+                  <circle cx="12" cy="5" r="2" />
+                  <path d="M12 7v4" />
+                  <line x1="8" x2="8" y1="16" y2="16" />
+                  <line x1="16" x2="16" y1="16" y2="16" />
+                </svg>
+              }
+            />
           </div>
-        </a>
-
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M2 3h20" />
-            <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" />
-            <path d="m7 21 5-5 5 5" />
-          </svg>
-
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Get freelance work
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                New design projects delivered to your inbox each morning.
-              </p>
-            </div>
-
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
-          </div>
-        </a>
-
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
-            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-            <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
-            <path d="M2 7h20" />
-            <path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7" />
-          </svg>
-
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Sell your goods
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Get your goods in front of millions of potential customers with
-                ease.
-              </p>
-            </div>
-
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
-          </div>
-        </a>
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="13.5" cy="6.5" r=".5" />
-            <circle cx="17.5" cy="10.5" r=".5" />
-            <circle cx="8.5" cy="7.5" r=".5" />
-            <circle cx="6.5" cy="12.5" r=".5" />
-            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-          </svg>
-
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Build your portfolio
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                The simplest way to keep your portfolio always up-to-date.
-              </p>
-            </div>
-
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
-          </div>
-        </a>
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="13.5" cy="6.5" r=".5" />
-            <circle cx="17.5" cy="10.5" r=".5" />
-            <circle cx="8.5" cy="7.5" r=".5" />
-            <circle cx="6.5" cy="12.5" r=".5" />
-            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-          </svg>
-
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Build your portfolio
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                The simplest way to keep your portfolio always up-to-date.
-              </p>
-            </div>
-
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
-          </div>
-        </a>
-        <a
-          className="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all dark:hover:bg-white/[.075] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
-        >
-          <svg
-            className="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 me-6 dark:text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M2 3h20" />
-            <path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" />
-            <path d="m7 21 5-5 5 5" />
-          </svg>
-
-          <div>
-            <div>
-              <h3 className="block font-bold text-gray-800 dark:text-white">
-                Get freelance work
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                New design projects delivered to your inbox each morning.
-              </p>
-            </div>
-
-            <p className="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold text-gray-800 dark:text-gray-200">
-              Learn more
-              <svg
-                className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
+    // </div>
   );
 }
 

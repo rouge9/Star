@@ -12,6 +12,7 @@ import Clients from "./componets/Clients";
 import Layout from "./layout/Layout";
 import Services from "./componets/Services";
 import SimpleGallery from "./componets/SimpleGallery";
+import SimpleClients from "./componets/SimpleClients";
 
 function App() {
   return (
@@ -21,11 +22,12 @@ function App() {
       {/* <Hero /> */}
       <ShuffleHero />
       {/* <Divider /> */}
+      <SimpleClients />
       <Clients />
-      {/* <SimpleGallery /> */}
-      {/* <Gallery /> */}
-      <Services />
       {/* <Features /> */}
+      <Gallery />
+      {/* <SimpleGallery /> */}
+      <Services />
       {/* <SimpleFooter /> */}
       {/* <Footer /> */}
     </Layout>
