@@ -1,23 +1,8 @@
 import Layout from "../layout/Layout";
-import Gallery from "../componets/Gallery";
-import SimpleGallery from "../componets/SimpleGallery";
 import ImgContainer from "../componets/ImgContainer";
+import { images } from "../helper/Imges";
 
 function GalleryPage() {
-  const images = [
-    "/test.png",
-    "/test2.png",
-    "/test3.png",
-    "/test.png",
-    "/test2.png",
-    "/test3.png",
-    "/test.png",
-    "/test2.png",
-    "/test3.png",
-    "/test.png",
-    "/test2.png",
-    "/test3.png",
-  ];
   return (
     <Layout>
       <div

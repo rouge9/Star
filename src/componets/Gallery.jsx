@@ -22,9 +22,9 @@ function Gallery() {
   };
 
   return (
-    <div className="max-w-screen-2xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-screen-2xl py-10 lg:py-14 mx-auto">
       <div className="flex justify-center items-center pb-8 pt-8">
-        <p className="text-6xl font-extrabold">Gallery</p>
+        <p className="text-5xl font-bold">Gallery</p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4">
         <div className="space-y-2">
@@ -93,7 +93,7 @@ function Gallery() {
         </div>
       </div>
       <Modal modalImg={modalImg} images={images} position={position} />
-      <div className="divider mt-8 md:mt-0">
+      <div className="divider mt-8 md:mt-5">
         <a
           className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border shadow-sm  disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
           href="/gallery"
