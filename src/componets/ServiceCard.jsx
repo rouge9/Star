@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function ServiceCard({ title, description, image, color }) {
   return (
-    <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl ">
+    <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl">
       <div
         className={`h-52 flex flex-col justify-center items-center ${color} rounded-t-xl`}
       >

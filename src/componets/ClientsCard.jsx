@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function ClientsCard({ title, description, icon }) {
   return (
     <div className="flex gap-x-5">
