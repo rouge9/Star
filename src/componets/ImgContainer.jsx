@@ -1,9 +1,10 @@
-function ImgContainer({ img }) {
+/* eslint-disable react/prop-types */
+function ImgContainer({ img, onClick }) {
   return (
     <div
       className="cursor-pointer"
       onClick={() => {
-        // handleImgClick([9.028293, 38.752438]);
+        onClick(img);
       }}
     >
       <img
