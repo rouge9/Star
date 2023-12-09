@@ -1,29 +1,25 @@
 import { useState } from "react";
 import Modal from "../componets/Modal";
 import Layout from "../layout/Layout";
+import ProjectCard from "../componets/projects/ProjectCard";
+import { contructor1, contructor2 } from "../data/ProjectData";
 
 function Projects() {
-  const [modalImg, setModalImg] = useState("");
-  const [position, setPosition] = useState([9.03314, 38.75008]); // [lat, lng]
-  const images = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  const [position, setPosition] = useState([9.03314, 38.75008]);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
 
-  const handleImgClick = (p) => {
-    setModalImg(images[0].src);
+  const handleImgClick = ({ p, img, title, desc }) => {
+    setImages(img);
     setPosition(p);
+    setTitle(title);
+    setDesc(desc);
     document.getElementById("modal").showModal();
   };
   return (
     <Layout>
-      <Modal modalImg={modalImg} images={images} position={position} />
+      <Modal images={images} position={position} title={title} desc={desc} />
       <div
         style={{
           backgroundImage: `url(/hyperdrive.svg)`,
@@ -37,138 +33,45 @@ function Projects() {
             </h2>
           </div>
 
-          <p className="text-gray-600 text-lg font-bold">
-            Lorem ipsum dolor sit amet,
-          </p>
+          <p className="text-gray-600 text-lg font-bold">Contrcutor 1</p>
           <div className="divider"></div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-12">
-            <div
-              className="text-center cursor-pointer"
-              onClick={() => {
-                handleImgClick([9.028293, 38.752438]);
-              }}
-            >
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto hover:scale-105 transition duration-300 ease-in-out"
-                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
+            {contructor1.map((project) => (
+              <ProjectCard
+                key={project.id}
+                handleOnClick={() =>
+                  handleImgClick({
+                    p: project.position,
+                    img: project.images,
+                    title: project.title,
+                    desc: project.description,
+                  })
+                }
+                title={project.title}
+                subtitle={project.subtitle}
+                img={project.img}
               />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg ">
-                  David Forren
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base">
-                  Founder / CEO
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
-              />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg dark:text-gray-200">
-                  Amil Evara
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base dark:text-gray-400">
-                  UI/UX Designer
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto"
-                src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
-              />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg dark:text-gray-200">
-                  Ebele Egbuna
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base dark:text-gray-400">
-                  Support Consultant
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto"
-                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
-              />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg dark:text-gray-200">
-                  Maria Powers
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base dark:text-gray-400">
-                  Director of sales
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-          <p className="text-gray-600 mb-6 text-lg font-bold mt-8">
-            Lorem ipsum dolor sit amet,
-          </p>
+          <p className="text-gray-600 text-lg font-bold">Contrcutor 2</p>
           <div className="divider"></div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-            <div
-              className="text-center cursor-pointer"
-              onClick={() => {
-                handleImgClick([9.028293, 38.752438]);
-              }}
-            >
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto hover:scale-105 transition duration-300 ease-in-out"
-                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-12">
+            {contructor2.map((project) => (
+              <ProjectCard
+                key={project.id}
+                handleOnClick={() =>
+                  handleImgClick({
+                    p: project.position,
+                    img: project.images,
+                    title: project.title,
+                    desc: project.description,
+                  })
+                }
+                title={project.title}
+                subtitle={project.subtitle}
+                img={project.img}
               />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg ">
-                  David Forren
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base">
-                  Founder / CEO
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
-              />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg dark:text-gray-200">
-                  Amil Evara
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base dark:text-gray-400">
-                  UI/UX Designer
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <img
-                className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto"
-                src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
-                alt="Image Description"
-              />
-              <div className="mt-2 sm:mt-4">
-                <h3 className="text-sm font-medium text-gray-800 sm:text-base lg:text-lg dark:text-gray-200">
-                  Ebele Egbuna
-                </h3>
-                <p className="text-xs text-gray-600 sm:text-sm lg:text-base dark:text-gray-400">
-                  Support Consultant
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

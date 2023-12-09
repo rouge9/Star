@@ -1,23 +1,18 @@
 import { useState } from "react";
 import Modal from "./Modal";
+import { galleryData } from "../data/GalleryData";
 
 function Gallery() {
-  const [modalImg, setModalImg] = useState("");
-  const [position, setPosition] = useState([9.03314, 38.75008]); // [lat, lng]
-  const images = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  const [position, setPosition] = useState([9.03314, 38.75008]);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
 
-  const handleImgClick = (p) => {
-    setModalImg(images[0].src);
+  const handleImgClick = ({ p, img, title, desc }) => {
+    setImages(img);
     setPosition(p);
+    setTitle(title);
+    setDesc(desc);
     document.getElementById("modal").showModal();
   };
 
@@ -29,70 +24,144 @@ function Gallery() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 px-4">
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300 ease-in-out rounded-md"
-            src={images[0].src}
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img1.img}
             alt="Image Description"
             onClick={() => {
-              handleImgClick([9.028293, 38.752438]);
+              handleImgClick({
+                p: galleryData.img1.position,
+                img: galleryData.img1.images,
+                title: galleryData.img1.title,
+                desc: galleryData.img1.description,
+              });
             }}
           />
           <img
-            className="w-full h-auto object-cover cursor-pointer hover:scale-105 transition duration-300 ease-in-out rounded-md"
-            src="https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img2.img}
             alt="Image Description"
             onClick={() => {
-              handleImgClick([9.037004, 38.74109]);
+              handleImgClick({
+                p: galleryData.img2.position,
+                img: galleryData.img2.images,
+                title: galleryData.img2.title,
+                desc: galleryData.img2.description,
+              });
             }}
           />
           <img
-            className="w-full h-56 object-cover"
-            src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+            className="w-full h-28 md:h-56 object-cover cursor-pointer  rounded-md"
+            src={galleryData.img3.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img3.position,
+                img: galleryData.img3.images,
+                title: galleryData.img3.title,
+                desc: galleryData.img3.description,
+              });
+            }}
           />
         </div>
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img4.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img4.position,
+                img: galleryData.img4.images,
+                title: galleryData.img4.title,
+                desc: galleryData.img4.description,
+              });
+            }}
           />
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1664574654529-b60630f33fdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img5.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img5.position,
+                img: galleryData.img5.images,
+                title: galleryData.img5.title,
+                desc: galleryData.img5.description,
+              });
+            }}
           />
         </div>
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img6.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img6.position,
+                img: galleryData.img6.images,
+                title: galleryData.img6.title,
+                desc: galleryData.img6.description,
+              });
+            }}
           />
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img7.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img7.position,
+                img: galleryData.img7.images,
+                title: galleryData.img7.title,
+                desc: galleryData.img7.description,
+              });
+            }}
           />
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img8.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img8.position,
+                img: galleryData.img8.images,
+                title: galleryData.img8.title,
+                desc: galleryData.img8.description,
+              });
+            }}
           />
         </div>
         <div className="space-y-2">
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1668869713519-9bcbb0da7171?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img9.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img9.position,
+                img: galleryData.img9.images,
+                title: galleryData.img9.title,
+                desc: galleryData.img9.description,
+              });
+            }}
           />
           <img
-            className="w-full h-auto object-cover"
-            src="https://images.unsplash.com/photo-1668584054035-f5ba7d426401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3465&q=80"
+            className="w-full h-auto object-cover cursor-pointer  rounded-md"
+            src={galleryData.img10.img}
             alt="Image Description"
+            onClick={() => {
+              handleImgClick({
+                p: galleryData.img10.position,
+                img: galleryData.img10.images,
+                title: galleryData.img10.title,
+                desc: galleryData.img10.description,
+              });
+            }}
           />
         </div>
       </div>
-      <Modal modalImg={modalImg} images={images} position={position} />
+      <Modal images={images} position={position} title={title} desc={desc} />
       <div className="divider mt-8 md:mt-5">
         <a
           className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border shadow-sm  disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
