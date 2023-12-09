@@ -3,7 +3,6 @@ import ImgContainer from "../componets/ImgContainer";
 import { images } from "../helper/Imges";
 import { useState } from "react";
 import Carsoule from "../componets/Carsoule";
-import GalleryLayout from "../layout/GalleryLayout";
 
 function GalleryPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,7 +28,7 @@ function GalleryPage() {
   };
 
   return (
-    <GalleryLayout>
+    <Layout>
       <div
         style={{
           backgroundImage: `url(/hyperdrive.svg)`,
@@ -62,7 +61,7 @@ function GalleryPage() {
           )}
         </div>
       </div>
-    </GalleryLayout>
+    </Layout>
   );
 }
 

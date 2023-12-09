@@ -2,8 +2,11 @@ import ServiceCard from "./ServiceCard";
 
 function Services() {
   return (
-    // <a id="services" className="block relative-top-20" href="/gallery">
-    <div className="max-w-screen-2xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    // <a id="" className="block relative-top-20" href="/gallery">
+    <div
+      id="services"
+      className="max-w-screen-2xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+    >
       <p className="text-slate-800 text-4xl font-bold text-center mb-10">
         Our Servies include
       </p>
