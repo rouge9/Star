@@ -2,7 +2,7 @@
 function SimpleFooter() {
   return (
     <footer
-      className="w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-base-content rounded-se-3xl"
+      className="w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-base-content"
       style={{
         backgroundImage: `url(/banner-bg-gray.svg)`,
         backgroundSize: "cover",

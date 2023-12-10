@@ -162,7 +162,7 @@ function Gallery() {
         </div>
       </div>
       <Modal images={images} position={position} title={title} desc={desc} />
-      <div className="divider mt-8 md:mt-5">
+      <div id="services" className="divider mt-8 md:mt-5">
         <a
           className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border shadow-sm  disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
           href="/gallery"
