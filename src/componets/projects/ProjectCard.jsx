@@ -1,7 +1,18 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 function ProjectCard({ handleOnClick, title, subtitle, img }) {
   return (
-    <div className="text-center cursor-pointer" onClick={handleOnClick}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1, type: "spring" },
+      }}
+      viewport={{ once: true }}
+      className="text-center cursor-pointer"
+      onClick={handleOnClick}
+    >
       <img
         className="rounded-xl sm:w-48 sm:h-48 lg:w-60 lg:h-60 mx-auto hover:scale-105 transition duration-300 ease-in-out"
         src={img}
@@ -15,7 +26,7 @@ function ProjectCard({ handleOnClick, title, subtitle, img }) {
           {subtitle}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,7 +1,18 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 function ServiceCard({ title, description, image, color }) {
   return (
-    <div className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl">
+    <motion.div
+      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { duration: 1, type: "spring" },
+      }}
+      viewport={{ once: false }}
+      className="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl"
+    >
       <div
         className={`h-52 flex flex-col justify-center items-center ${color} rounded-t-xl`}
       >
@@ -23,7 +34,7 @@ function ServiceCard({ title, description, image, color }) {
           View sample
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

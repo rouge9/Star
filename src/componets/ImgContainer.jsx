@@ -1,7 +1,15 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 function ImgContainer({ img, onClick }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1, type: "spring" },
+      }}
+      viewport={{ once: true }}
       className="cursor-pointer"
       onClick={() => {
         onClick(img);
@@ -12,7 +20,7 @@ function ImgContainer({ img, onClick }) {
         src={img}
         alt="Image Description"
       />
-    </div>
+    </motion.div>
   );
 }
 

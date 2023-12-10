@@ -1,5 +1,4 @@
 import ClientsCard from "./ClientsCard";
-
 function Clients() {
   return (
     // <div className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-200 rounded-lg">

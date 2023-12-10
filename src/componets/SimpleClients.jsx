@@ -1,15 +1,33 @@
+import { motion } from "framer-motion";
+
 function SimpleClients() {
   return (
     <div
       id="clients"
       className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
     >
-      <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6">
-        <h2 className="text-gray-600 ">
+      <motion.div
+        initial={{ opacity: 0.3 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 0.3, delay: 0.3 },
+        }}
+        viewport={{ once: true }}
+        className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6"
+      >
+        <p className="text-gray-600 ">
           Trusted by Open Source, enterprise, and more than 99,000 of you
-        </h2>
-      </div>
-      <div className="flex justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
+        </p>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0.3 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
+        viewport={{ once: true }}
+        className="flex justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"
+      >
         <svg
           className="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto sm:mx-0 text-gray-500"
           enableBackground="new 0 0 2499 614"
@@ -79,8 +97,16 @@ function SimpleClients() {
             fill="currentColor"
           />
         </svg>
-      </div>
-      <div className="flex justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0.3 }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 0.5, delay: 0.7 },
+        }}
+        viewport={{ once: true }}
+        className="flex justify-center gap-x-6 sm:gap-x-12 lg:gap-x-24"
+      >
         <svg
           className="py-3 lg:py-5 w-16 h-auto md:w-20 lg:w-24 mx-auto sm:mx-0 text-gray-500"
           enableBackground="new 0 0 2499 614"
@@ -137,10 +163,10 @@ function SimpleClients() {
             fill="currentColor"
           />
         </svg>
-      </div>
-      <div className="mt-8 text-center">
+      </motion.div>
+      <motion.div whileTap={{ scale: 0.95 }} className="mt-8 text-center">
         <a
-          className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border shadow-sm  disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
+          className="cursor-pointer py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border shadow-sm  disabled:opacity-50 disabled:pointer-events-none bg-slate-900 border-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-600"
           href="/projects"
         >
           Learn more
@@ -159,7 +185,7 @@ function SimpleClients() {
             <path d="m9 18 6-6-6-6" />
           </svg>
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }
