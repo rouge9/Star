@@ -7,7 +7,7 @@ function ClientsCard({ title, description, icon }) {
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { delay: 0.1, type: "spring" },
+        transition: { type: "spring" },
       }}
       viewport={{ once: true }}
       className="flex gap-x-5"

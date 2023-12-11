@@ -28,8 +28,6 @@ function App() {
       <Gallery />
       {/* <SimpleGallery /> */}
       <Services />
-      {/* <SimpleFooter /> */}
-      {/* <Footer /> */}
     </Layout>
   );
 }

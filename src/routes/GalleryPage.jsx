@@ -37,7 +37,7 @@ function GalleryPage() {
       >
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-10  lg:mb-14">
-            <p className="text-3xl font-extrabold md:text-6xl inline-block bg-gradient-to-r from-blue-600  to-purple-600 text-transparent bg-clip-text">
+            <p className="text-3xl font-extrabold md:text-5xl inline-block bg-gradient-to-r from-blue-600  to-purple-600 text-transparent bg-clip-text">
               GALLERY
             </p>
           </div>

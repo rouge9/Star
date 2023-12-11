@@ -13,19 +13,39 @@ const ShuffleHero = () => {
       }}
     >
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
+        {/* <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
           Better every day
-        </span>
-        <h3 className="text-4xl md:text-6xl font-semibold">
-          Let's change it up a bit
-        </h3>
+        </span> */}
+        <p className="text-4xl md:text-6xl font-semibold">
+          Let's change{" "}
+          <span className="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">
+            Together
+          </span>
+        </p>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
           error repellat voluptatibus ad.
         </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
-          Find a class
-        </button>
+        <a
+          className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4"
+          href="#"
+        >
+          Get started
+          <svg
+            className="flex-shrink-0 w-4 h-4"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+              stroke="currentColor"
+              width="2"
+              // linecap="round"
+            />
+          </svg>
+        </a>
       </div>
       <ShuffleGrid />
     </section>
@@ -148,7 +168,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 h-[450px] gap-1">
+    <div className="hidden md:grid grid-cols-3 grid-rows-3 h-[450px] gap-1">
       {squares.map((sq) => sq)}
     </div>
   );

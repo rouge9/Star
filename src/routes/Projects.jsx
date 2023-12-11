@@ -28,9 +28,9 @@ function Projects() {
       >
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-10  lg:mb-14">
-            <h2 className="text-3xl font-bold md:text-4xl md:leading-tight">
-              Projects
-            </h2>
+            <p className="text-3xl md:text-5xl font-extrabold bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">
+              PROJECTS
+            </p>
           </div>
 
           <p className="text-gray-600 text-lg font-bold">Contrcutor 1</p>
