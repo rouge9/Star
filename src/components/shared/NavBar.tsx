@@ -29,30 +29,71 @@ export default function NavBar() {
   }, [scrolled]);
   return (
     <nav
+      // id="hero"
       className={clsx(
         "flex justify-between sticky top-0 py-8 px-8 lg:px-24 bg-secondary w-full z-50 transition-all duration-300 ease-in-out",
         scrolled && "shadow-md"
       )}
     >
       <div className="flex items-center justify-between space-x-16 ">
-        <div className="flex items-center space-x-2">
+        <Link
+          activeClass=""
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="flex items-center space-x-2 cursor-pointer"
+        >
           <img src="/logo.png" alt="logo" className="w-7 h-7" />
           <div className="text-2xl font-bold">Expanse</div>
-        </div>
+        </Link>
 
         <div className="hidden lg:flex space-x-4">
-          <a href="/" className="text-teal-300 font-semibold">
+          <Link
+            activeClass="text-teal-300"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="font-semibold 2xl:text-xl cursor-pointer"
+          >
             Home
-          </a>
-          <a href="/about" className="text-foreground font-semibold">
-            About Us
-          </a>
-          <a href="/contact" className="text-foreground font-semibold">
-            Pricing
-          </a>
-          <a href="/contact" className="text-foreground font-semibold">
+          </Link>
+          <Link
+            activeClass="text-teal-300"
+            to="features"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="font-semibold 2xl:text-xl cursor-pointer"
+          >
             Features
-          </a>
+          </Link>
+          <Link
+            activeClass="text-teal-300"
+            to="testemonial"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="font-semibold 2xl:text-xl cursor-pointer"
+          >
+            Testemonial
+          </Link>
+          <Link
+            activeClass="text-teal-300"
+            to="faq"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="font-semibold 2xl:text-xl cursor-pointer"
+          >
+            Faq
+          </Link>
         </div>
       </div>
       <Button className="hidden lg:block bg-foreground text-white">
@@ -72,37 +113,48 @@ export default function NavBar() {
             </SheetHeader>
             <ul className="flex flex-col items-start space-y-5 cursor-pointer pt-10">
               <Link
-                activeClass="border-b-4 border-zinc-800"
-                to="explore"
+                activeClass="text-teal-300"
+                to="hero"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-zinc-800 text-lg"
+                className="font-semibold 2xl:text-xl cursor-pointer"
               >
-                Explore
+                Home
               </Link>
               <Link
-                activeClass="border-b-4 border-zinc-800"
-                to="company"
+                activeClass="text-teal-300"
+                to="features"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-zinc-800 text-lg"
+                className="font-semibold 2xl:text-xl cursor-pointer"
               >
-                Company
+                Features
               </Link>
               <Link
-                activeClass="border-b-4 border-zinc-800"
-                to="support"
+                activeClass="text-teal-300"
+                to="testemonial"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-zinc-800 text-lg"
+                className="font-semibold 2xl:text-xl cursor-pointer"
               >
-                Support
+                Testemonial
+              </Link>
+              <Link
+                activeClass="text-teal-300"
+                to="faq"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="font-semibold 2xl:text-xl cursor-pointer"
+              >
+                Faq
               </Link>
             </ul>
             <div className="flex justify-center items-center py-20">
