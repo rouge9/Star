@@ -1,6 +1,6 @@
 export default function Faq() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-16">
       <div className="flex flex-col justify-start">
         <h1 className="text-2xl font-normal text-sky-300">FAQ</h1>
         <h1 className="text-5xl font-bold text-foreground pt-3">

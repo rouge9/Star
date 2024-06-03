@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function NavBar() {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center sticky top-0 bg-secondary py-8 z-30">
       <div className="flex items-center justify-between space-x-16">
         <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="logo" className="w-7 h-7" />
