@@ -3,11 +3,15 @@ import { BellDotIcon, BoxesIcon, BoxIcon, SparkleIcon } from "lucide-react";
 export default function Features() {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
         <img src="/addExpense2.svg" alt="hero" className="" />
         <div className="flex flex-col">
-          <h3 className="text-2xl font-semibold text-sky-400">Features</h3>
-          <h3 className="text-4xl font-bold">Expanse Premium</h3>
+          <h3 className="text-2xl font-semibold text-sky-400 text-center lg:text-start">
+            Features
+          </h3>
+          <h3 className="text-xl lg:text-4xl font-bold text-center lg:text-start">
+            Expanse Premium
+          </h3>
           <div className="flex flex-col gap-4 pt-8">
             <div className="flex gap-4 items-center">
               <SparkleIcon size={24} className="text-sky-300" />
@@ -18,6 +22,7 @@ export default function Features() {
               voluptates, doloremque quae, quas, quod
             </p>
           </div>
+
           <div className="flex flex-col gap-4 pt-8">
             <div className="flex gap-4 items-center">
               <BoxesIcon size={24} className="text-sky-300" />
@@ -40,10 +45,15 @@ export default function Features() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      {/* why us */}
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         <div className="flex flex-col">
-          <h3 className="text-2xl font-semibold text-sky-400">Advantages</h3>
-          <h3 className="text-4xl font-bold">Why Choose Expense?</h3>
+          <h3 className="text-2xl font-semibold text-sky-400 text-center lg:text-start">
+            Advantages
+          </h3>
+          <h3 className="text-4xl font-bold text-center lg:text-start">
+            Why Choose Expense?
+          </h3>
           <div className="flex flex-col gap-4 pt-8">
             <div className="flex gap-4 items-center">
               <BellDotIcon size={30} className="text-sky-300" />
@@ -60,12 +70,16 @@ export default function Features() {
         </div>
         <img src="/report2.svg" alt="hero" className="" />
       </div>
-      <div className="flex justify-between items-center">
+
+      {/* full customization */}
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
         <img src="/addCategory.svg" alt="addCategory" className="" />
         <div className="flex flex-col">
           <div className="flex gap-4 items-center">
             <SparkleIcon size={40} className="text-sky-300" />
-            <h1 className="text-4xl font-bold ">Fully Customizable</h1>
+            <h1 className="text-4xl font-bold text-center lg:text-start ">
+              Fully Customizable
+            </h1>
           </div>
           <p className="text-lg text-muted-foreground pt-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

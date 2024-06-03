@@ -5,15 +5,19 @@ export default function Testemonial() {
   return (
     <div className="flex flex-col">
       <h1 className="text-3xl text-center font-semibold">Testemonial</h1>
-      <h1 className="text-6xl text-center font-bold">What Our User</h1>
-      <h1 className="text-5xl text-center font-bold">Say About Us?</h1>
-      <div className="flex justify-between items-center">
+      <h1 className="text-3xl lg:text-6xl text-center font-bold">
+        What Our User
+      </h1>
+      <h1 className="text-2xl lg:text-5xl text-center font-bold">
+        Say About Us?
+      </h1>
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         <img src="/testemonial.png" alt="testemonial" className="" />
         <div className="flex flex-col">
-          <h1 className="text-4xl font-semibold ">
+          <h1 className="text-2xl lg:text-4xl font-semibold ">
             The best Finiance Tracking App On The Market
           </h1>
-          <p className="text-lg text-muted-foreground pt-8">
+          <p className="text-lg text-muted-foreground pt-4 lg:pt-8">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptates, doloremque quae, quas, quod, Lorem ipsum, dolor sit amet
             consectetur adipisicing elit. Atque blanditiis perferendis sed

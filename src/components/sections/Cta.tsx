@@ -3,16 +3,16 @@ import { useState } from "react";
 export default function Cta() {
   const [isHover, setIsHover] = useState(false);
   return (
-    <div className="flex justify-center items-center bg-foreground rounded-3xl">
+    <div className="flex justify-center items-center bg-foreground rounded-3xl p-8 2xl:p-0">
       <div className="flex flex-col">
-        <h1 className="text-2xl md:text-4xl text-secondary text-wrap font-extrabold">
+        <h1 className="text-2xl md:text-4xl text-secondary text-center lg:text-start text-wrap font-extrabold">
           Easy Way to manage your Finances
         </h1>
-        <p className="text-lg md:text-lg text-muted-foreground pt-2 md:pt-6">
+        <p className="text-lg md:text-lg text-muted-foreground text-center lg:text-start pt-2 md:pt-6">
           Easy to use mobile app that support on android and ios
         </p>
-        <div className="flex space-x-4 pt-2 md:pt-8">
-          <div className="flex space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center">
+        <div className="flex justify-center items-center lg:justify-start lg:items-start space-x-4 pt-2 md:pt-8">
+          <div className="flex space-x-3 lg:space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -25,12 +25,12 @@ export default function Cta() {
               />
             </svg>
             <div className="flex flex-col">
-              <p className="text-sm text-foreground font-normal">Get it on</p>
-              <p className="text-xl text-foreground font-normal">Play Store</p>
+              <p className=" text-sm text-foreground font-normal">Get it on</p>
+              <p className=" text-xl text-foreground font-normal">Play Store</p>
             </div>
           </div>
           <div
-            className="flex space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center"
+            className="hidden sm:flex lg:space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center"
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
           >
@@ -46,7 +46,7 @@ export default function Cta() {
               />
             </svg>
             <div className="flex flex-col">
-              <p className="text-sm text-foreground font-normal">
+              <p className=" text-sm text-foreground font-normal">
                 {isHover ? "" : "Download on the"}
               </p>
               <p className="text-xl text-foreground font-normal">

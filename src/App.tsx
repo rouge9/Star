@@ -8,14 +8,16 @@ import NavBar from "./components/shared/NavBar";
 
 function App() {
   return (
-    <div className="w-full px-24 py-8 bg-gray-100 ">
+    <div className="">
       <NavBar />
-      <Hero />
-      <Features />
-      <Testemonial />
-      <Faq />
-      <Cta />
-      <Footer />
+      <div className="w-full px-8 lg:px-24 py-8 bg-gray-100 ">
+        <Hero />
+        <Features />
+        <Testemonial />
+        <Faq />
+        <Cta />
+        <Footer />
+      </div>
     </div>
   );
 }
