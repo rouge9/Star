@@ -1,5 +1,7 @@
+import Faq from "./components/sections/Faq";
 import Features from "./components/sections/Features";
 import Hero from "./components/sections/Hero";
+import Testemonial from "./components/sections/Testemonial";
 import NavBar from "./components/shared/NavBar";
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
       <NavBar />
       <Hero />
       <Features />
+      <Testemonial />
+      <Faq />
     </div>
   );
 }
