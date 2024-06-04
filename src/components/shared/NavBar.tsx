@@ -96,9 +96,11 @@ export default function NavBar() {
           </Link>
         </div>
       </div>
-      <Button className="hidden lg:block bg-foreground text-white">
-        Download
-      </Button>
+      <a href="https://drive.google.com/file/d/1rmxKiJWKaFqm2_InLnseTUyJQU6g7mg4/view?usp=sharing">
+        <Button className="hidden lg:block bg-foreground text-white">
+          Download
+        </Button>
+      </a>
       <div className="lg:hidden flex justify-between items-center">
         <Sheet>
           <SheetTrigger>
@@ -158,7 +160,9 @@ export default function NavBar() {
               </Link>
             </ul>
             <div className="flex justify-center items-center py-20">
-              <Button className="bg-foreground text-white">Download</Button>
+              <a href="https://drive.google.com/file/d/1rmxKiJWKaFqm2_InLnseTUyJQU6g7mg4/view?usp=sharing">
+                <Button className="bg-foreground text-white">Download</Button>
+              </a>
             </div>
           </SheetContent>
         </Sheet>
