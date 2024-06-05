@@ -161,7 +161,7 @@ export default function Features() {
           </div>
         </motion.div>
         <motion.img
-          src="/report2.svg"
+          src="/report.svg"
           alt="report"
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           whileInView={{
