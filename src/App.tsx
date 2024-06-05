@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="">
       <NavBar />
-      <div className="w-full px-8 lg:px-24 py-8 bg-gray-100 ">
+      <div className="w-full px-8 lg:px-24 py-8 bg-gray-100">
         <Hero />
         <Features />
         <Testemonial />

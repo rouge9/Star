@@ -97,7 +97,7 @@ export default function NavBar() {
         </div>
       </div>
       <a
-        href="https://github.com/rouge9/expense_monitor/releases/download/v1.0.0/expnase.apk"
+        href="https://github.com/rouge9/expense_monitor/releases/download/v1.0.0/Expanse.apk"
         target="_blank"
         rel="noopener noreferrer"
       >
