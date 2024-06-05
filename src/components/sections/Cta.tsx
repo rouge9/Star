@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTransform, useScroll, motion } from "framer-motion";
 
 export default function Cta() {
   const [isHover, setIsHover] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const grow = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
     <div className="flex justify-center items-center bg-foreground rounded-3xl p-8 2xl:p-0">
       <div className="flex flex-col">
@@ -12,23 +15,33 @@ export default function Cta() {
           Easy to use mobile app that support on android and ios
         </p>
         <div className="flex justify-center items-center lg:justify-start lg:items-start space-x-4 pt-2 md:pt-8">
-          <div className="flex space-x-3 lg:space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26"
-              height="33"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
-                fill="black"
-              />
-            </svg>
-            <div className="flex flex-col">
-              <p className=" text-sm text-foreground font-normal">Get it on</p>
-              <p className=" text-xl text-foreground font-normal">Play Store</p>
+          <a
+            href="https://github.com/rouge9/expense_monitor/releases/tag/v1.0.0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex space-x-3 lg:space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="33"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
+                  fill="black"
+                />
+              </svg>
+              <div className="flex flex-col">
+                <p className=" text-sm text-foreground font-normal">
+                  Get it on
+                </p>
+                <p className=" text-xl text-foreground font-normal">
+                  Play Store
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
           <div
             className="hidden sm:flex lg:space-x-4 bg-secondary rounded-xl p-4  hover:bg-muted-foreground cursor-pointer justify-center items-center"
             onMouseEnter={() => setIsHover(true)}
@@ -57,12 +70,13 @@ export default function Cta() {
         </div>
       </div>
       <div className="hidden lg:flex">
-        <img
+        <motion.img
           src="/cta.svg"
           alt="cta"
           className="
         w-full
         "
+          style={{ scale: grow }}
         />
       </div>
     </div>

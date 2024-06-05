@@ -1,8 +1,11 @@
 import { PlayCircleIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import useMediaQuery from "@/lib/usemediaQuery";
+import { useTransform, useScroll, motion } from "framer-motion";
 
 export default function Hero() {
+  const { scrollYProgress } = useScroll();
+  const grow = useTransform(scrollYProgress, [0, 1], [1, 2]);
   const isLargeDesktop = useMediaQuery("(min-width: 1700px)");
   return (
     <div id="hero" className="flex justify-between">
@@ -47,12 +50,13 @@ export default function Hero() {
         </div>
       </div>
       <div className="w-full hidden xl:block">
-        <img
+        <motion.img
           src="/hero3.svg"
           alt="hero"
           className={
             isLargeDesktop ? "w-[902px] h-[1100px]" : "w-[902px] h-[900px]"
           }
+          style={{ scale: grow }}
         />
       </div>
     </div>

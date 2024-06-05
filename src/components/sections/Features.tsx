@@ -1,14 +1,36 @@
 import useMediaQuery from "@/lib/usemediaQuery";
 import clsx from "clsx";
 import { BellDotIcon, BoxesIcon, BoxIcon, SparkleIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Features() {
   const isLargeDesktop = useMediaQuery("(min-width: 1700px)");
+
   return (
     <div id="features" className="flex flex-col">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
-        <img src="/addExpense2.svg" alt="hero" className="" />
-        <div className="flex flex-col">
+        <motion.img
+          src="/addExpense2.svg"
+          alt="hero"
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        />
+        <motion.div
+          className="flex flex-col"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-2xl font-semibold text-sky-400 text-center lg:text-start">
             Features
           </h3>
@@ -86,11 +108,20 @@ export default function Features() {
               voluptates, doloremque quae, quas, quod
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       {/* why us */}
       <div className="flex flex-col lg:flex-row justify-between items-center">
-        <div className="flex flex-col">
+        <motion.div
+          className="flex flex-col"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-2xl font-semibold text-sky-400 text-center lg:text-start">
             Advantages
           </h3>
@@ -128,14 +159,45 @@ export default function Features() {
               non placeat doloremque hic voluptate adipisci ab voluptates vitae.
             </p>
           </div>
-        </div>
-        <img src="/report2.svg" alt="hero" className="" />
+        </motion.div>
+        <motion.img
+          src="/report2.svg"
+          alt="report"
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        />
       </div>
 
       {/* full customization */}
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
-        <img src="/addCategory.svg" alt="addCategory" className="" />
-        <div className="flex flex-col">
+        <motion.img
+          src="/addCategory.svg"
+          alt="addCategory"
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        />
+        <motion.div
+          className="flex flex-col"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 2, type: "spring" },
+          }}
+          viewport={{ once: true }}
+        >
           <div className="flex gap-4 items-center">
             <SparkleIcon size={40} className="text-sky-300" />
             <h1
@@ -161,7 +223,7 @@ export default function Features() {
             explicabo minus omnis ipsam minima, molestiae quis dolore recusandae
             consectetur.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

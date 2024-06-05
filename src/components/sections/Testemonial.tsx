@@ -2,11 +2,16 @@ import { people } from "@/lib/data";
 import { AnimatedTooltip } from "../shared/animated_tooltip";
 import useMediaQuery from "@/lib/usemediaQuery";
 import clsx from "clsx";
+import { useTransform, useScroll, motion } from "framer-motion";
 
 export default function Testemonial() {
   const isLargeDesktop = useMediaQuery("(min-width: 1700px)");
+
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
+
   return (
-    <div id="testemonial" className="flex flex-col">
+    <motion.div id="testemonial" className="flex flex-col" style={{ scale }}>
       <h1 className="text-3xl text-center font-semibold">Testemonial</h1>
       <h1 className="text-3xl lg:text-6xl text-center font-bold">
         What Our User
@@ -38,6 +43,6 @@ export default function Testemonial() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -96,7 +96,11 @@ export default function NavBar() {
           </Link>
         </div>
       </div>
-      <a href="https://drive.google.com/file/d/1rmxKiJWKaFqm2_InLnseTUyJQU6g7mg4/view?usp=sharing">
+      <a
+        href="https://github.com/rouge9/expense_monitor/releases/download/v1.0.0/expnase.apk"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button className="hidden lg:block bg-foreground text-white">
           Download
         </Button>
@@ -160,7 +164,11 @@ export default function NavBar() {
               </Link>
             </ul>
             <div className="flex justify-center items-center py-20">
-              <a href="https://drive.google.com/file/d/1rmxKiJWKaFqm2_InLnseTUyJQU6g7mg4/view?usp=sharing">
+              <a
+                href="https://github.com/rouge9/expense_monitor/releases/tag/v1.0.0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-foreground text-white">Download</Button>
               </a>
             </div>
