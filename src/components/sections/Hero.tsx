@@ -5,7 +5,7 @@ import { useTransform, useScroll, motion } from "framer-motion";
 
 export default function Hero() {
   const { scrollYProgress } = useScroll();
-  const grow = useTransform(scrollYProgress, [0, 1], [1, 2]);
+  const grow = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
   const isLargeDesktop = useMediaQuery("(min-width: 1700px)");
   return (
     <div id="hero" className="flex justify-between">
@@ -34,8 +34,8 @@ export default function Hero() {
                 : "text-lg lg:text-2xl font-semibold text-muted-foreground"
             }
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            saepe est temporibus sed recusandae delectus inventore, beatae
+            Managing your finances shouldn't be a hassle. With Expanse, tracking
+            your expenses and saving money is simpler than ever.
           </p>
           <div className="flex gap-6 flex-col lg:flex-row">
             <Button className="bg-foreground text-white text-xl p-8">

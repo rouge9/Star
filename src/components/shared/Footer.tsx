@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 export default function Footer() {
   return (
     <footer className="pt-16">
@@ -43,13 +45,13 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:space-x-20 gap-8 lg:gap-0">
           <div className="flex flex-col gap-3">
             <h3 className="text-lg 2xl:text-2xl font-bold text-zinc-800">
-              About us
+              Company
             </h3>
             <ul className="flex flex-col gap-2 2xl:text-xl text-md">
-              <li className="text-zinc-800  2xl:text-xl">Our Story</li>
-              <li className="text-zinc-800 ">Our Team</li>
+              <li className="text-zinc-800  2xl:text-xl">About Us</li>
+              <li className="text-zinc-800 ">Blog</li>
               <li className="text-zinc-800 ">Careers</li>
-              <li className="text-zinc-800 ">Careers</li>
+              <li className="text-zinc-800 ">Press</li>
             </ul>
           </div>
           <div className="flex flex-col gap-3">
@@ -57,32 +59,52 @@ export default function Footer() {
               Prodcuts
             </h3>
             <ul className="flex flex-col gap-2 2xl:text-xl text-md">
-              <li className="text-zinc-800 ">Credits Card</li>
-              <li className="text-zinc-800 ">Gift Cards </li>
-              <li className="text-zinc-800 ">Savings account</li>
-              <li className="text-zinc-800 ">NFT</li>
+              <Link
+                to="features"
+                smooth={true}
+                duration={1000}
+                className="cursor-pointer"
+              >
+                <li className="text-zinc-800 ">Features</li>
+              </Link>
+              <a
+                href="https://github.com/rouge9/expense_monitor/releases/tag/v1.0.0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li className="text-zinc-800 ">Download </li>
+              </a>
+              <li className="text-zinc-800 ">Updates</li>
+              <li className="text-zinc-800 ">Pricing</li>
             </ul>
           </div>
           <div className="flex flex-col gap-3">
             <h3 className="text-lg font-bold text-zinc-800 2xl:text-2xl">
-              Useful Links
+              Support
             </h3>
             <ul className="flex flex-col gap-2 2xl:text-xl text-md">
-              <li className="text-zinc-800 ">Free rewards</li>
-              <li className="text-zinc-800 ">Documentation</li>
-              <li className="text-zinc-800 ">Documentation</li>
-              <li className="text-zinc-800 ">Affliation program</li>
+              <li className="text-zinc-800 "> Help Center</li>
+              <Link
+                to="faq"
+                smooth={true}
+                duration={1000}
+                className="cursor-pointer"
+              >
+                <li className="text-zinc-800 ">FAQs</li>
+              </Link>
+              <li className="text-zinc-800 ">Contact</li>
+              <li className="text-zinc-800 ">Support Community</li>
             </ul>
           </div>
           <div className="flex flex-col gap-3 pr-44">
             <h3 className="text-lg font-bold text-zinc-800 2xl:text-2xl">
-              Social
+              Legal
             </h3>
             <ul className="flex flex-col gap-2 2xl:text-xl text-md">
-              <li className="text-zinc-800 ">Change log</li>
+              <li className="text-zinc-800 ">Privacy Policy</li>
               <li className="text-zinc-800 ">Licence</li>
-              <li className="text-zinc-800 ">Site Maps</li>
-              <li className="text-zinc-800 ">News</li>
+              <li className="text-zinc-800 ">Terms of Service</li>
+              <li className="text-zinc-800 ">Security</li>
             </ul>
           </div>
         </div>

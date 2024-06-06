@@ -4,7 +4,7 @@ import { useTransform, useScroll, motion } from "framer-motion";
 export default function Cta() {
   const [isHover, setIsHover] = useState(false);
   const { scrollYProgress } = useScroll();
-  const grow = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const grow = useTransform(scrollYProgress, [0, 1], [1.7, 1]);
   return (
     <div className="flex justify-center items-center bg-foreground rounded-3xl p-8 2xl:p-0">
       <div className="flex flex-col">

@@ -8,6 +8,7 @@ export default function Features() {
 
   return (
     <div id="features" className="flex flex-col">
+      {/* features */}
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center">
         <motion.img
           src="/addExpense2.svg"
@@ -51,7 +52,7 @@ export default function Features() {
                   isLargeDesktop ? "text-4xl" : "text-xl"
                 )}
               >
-                Budgeting Intervals
+                Easy Expense Tracking
               </h3>
             </div>
             <p
@@ -60,8 +61,9 @@ export default function Features() {
                 isLargeDesktop ? "text-2xl" : "text-lg"
               )}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, doloremque quae, quas, quod
+              Effortlessly log your daily expenses with our user-friendly
+              interface. Categorize your spending and gain insights into where
+              your money goes.
             </p>
           </div>
           <div className="flex flex-col gap-4 pt-8">
@@ -73,7 +75,7 @@ export default function Features() {
                   isLargeDesktop ? "text-4xl" : "text-xl"
                 )}
               >
-                Budgeting Intervals
+                Custom Reports
               </h3>
             </div>
             <p
@@ -82,8 +84,9 @@ export default function Features() {
                 isLargeDesktop ? "text-2xl" : "text-lg"
               )}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, doloremque quae, quas, quod
+              Generate detailed reports to analyze your financial health.
+              Visualize your spending patterns with charts and graphs for better
+              understanding and control.
             </p>
           </div>
           <div className="flex flex-col gap-4 pt-8">
@@ -95,7 +98,7 @@ export default function Features() {
                   isLargeDesktop ? "text-4xl" : "text-xl"
                 )}
               >
-                Budgeting Intervals
+                Personalized Insights
               </h3>
             </div>
             <p
@@ -104,8 +107,9 @@ export default function Features() {
                 isLargeDesktop ? "text-2xl" : "text-lg"
               )}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, doloremque quae, quas, quod
+              Receive personalized tips and insights based on your spending
+              habits. Discover opportunities to save and make more informed
+              financial decisions.
             </p>
           </div>
         </motion.div>
@@ -152,11 +156,12 @@ export default function Features() {
                 isLargeDesktop ? "text-2xl" : "text-lg"
               )}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, doloremque quae, quas, quod, Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Fuga delectus omnis, eos amet
-              aspernatur enim voluptatibus facere velit quibusdam est ratione
-              non placeat doloremque hic voluptate adipisci ab voluptates vitae.
+              Choose Expanse to effortlessly track expenses, set and monitor
+              budgets in real-time, receive personalized financial insights,
+              securely sync across devices, generate custom reports, and stay
+              motivated with goal-setting features, all within an intuitive and
+              user-friendly interface backed by a supportive community and
+              top-notch data privacy.
             </p>
           </div>
         </motion.div>
@@ -216,12 +221,11 @@ export default function Features() {
               isLargeDesktop ? "text-2xl" : "text-lg"
             )}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptates, doloremque quae, quas, quod, Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Atque blanditiis perferendis sed
-            cupiditate labore sequi doloribus dolor praesentium! Optio modi
-            explicabo minus omnis ipsam minima, molestiae quis dolore recusandae
-            consectetur.
+            Expanse offers fully customizable categories to give you complete
+            control over how you track and manage your expenses. Tailor your
+            budgeting experience by creating categories that fit your unique
+            spending habits, ensuring your financial tracking is as personalized
+            and effective as possible.
           </p>
         </motion.div>
       </div>
