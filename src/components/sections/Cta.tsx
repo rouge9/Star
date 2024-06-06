@@ -6,7 +6,10 @@ export default function Cta() {
   const { scrollYProgress } = useScroll();
   const grow = useTransform(scrollYProgress, [0, 1], [1.7, 1]);
   return (
-    <div className="flex justify-center items-center bg-foreground rounded-3xl p-8 2xl:p-0">
+    <div
+      id="cta"
+      className="flex justify-center items-center bg-foreground rounded-3xl p-8 2xl:p-0"
+    >
       <div className="flex flex-col">
         <h1 className="text-2xl md:text-4xl text-secondary text-center lg:text-start text-wrap font-extrabold">
           Easy Way to manage your Finances
